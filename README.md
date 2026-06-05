@@ -1,6 +1,6 @@
 # LLM x GPU sizing toolkit
 
-"GPU poor" is not a lifestyle choice – it's just a capacity planning bug.
+"GPU poor" is not a lifestyle – it's just a capacity planning mistake.
 
 Running LLMs at scale without thinking about throughput, bandwidth, and KV cache is how you end up either (a) burning money, or (b) under the bridge.
 
