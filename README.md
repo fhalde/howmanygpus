@@ -23,6 +23,6 @@ uv run streamlit run src/howmanygpus/main.py
 
 The formulas and framing draw on:
 
-- [Horace He — *We're Here For A Good Time, Not A Long Time* (BRRR)](https://horace.io/brrr_intro.html) — prefill/decode cost model and serving intuition
+- [Making Deep Learning Go Brrrr From First Principles](https://horace.io/brrr_intro.html) — prefill/decode cost model and serving intuition
 - [Modal — Roofline model](https://modal.com/gpu-glossary/perf/roofline-model) — compute vs. memory-bandwidth binding
 - [Tensor Economics — LLM inference economics from first principles](https://www.tensoreconomics.com/p/llm-inference-economics-from-first) — capacity planning from hardware specs
