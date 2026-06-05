@@ -1,43 +1,23 @@
-# LLM × GPU sizing toolkit
+LLM x GPU sizing toolkit
 
-How many GPUs do you need to serve an LLM at a target load? This toolkit answers that from first principles — closed-form capacity floors, a discrete-event simulator, and parameter sweeps — in a single Streamlit app.
+"GPU poor" is not a lifestyle choice – it's just a capacity planning bug.
 
-**[Live demo](https://howmanygpus.streamlit.app/)** · **[Blog post](https://fhalde.github.io/posts/sizing/)**
+Running LLMs at scale without thinking about throughput, bandwidth, and KV cache is how you end up either (a) burning money, or (b) under the bridge.
 
-## What it does
+This toolkit helps you avoid both.
 
-Pick a model, GPU, parallelism layout, and workload. The app reports whether your configuration is compute-bound, bandwidth-bound, or memory-limited, and how many GPUs you need to sustain the offered load.
+It answers a simple question from first principles: how many GPUs do you actually need to serve an LLM at your target load? Under the hood, it combines closed-form capacity floors, a discrete-event simulator (simpy), and parameter sweeps – all wrapped in a single streamlit app.
 
-| View | What you get |
-|------|--------------|
-| **Estimate** | Instant throughput floors (compute vs. HBM bandwidth) plus residency checks for weights and KV cache. Assumes steady average load with no queueing. |
-| **Simulation** | Discrete-event simulator (SimPy) with Poisson arrivals, prefill/decode scheduling, KV-pressure preemption, and TTFT / TPOT / E2E latency CDFs against SLOs. |
-| **Sweeps** | Required GPUs vs. arrival rate and output length; bottleneck heatmap; optional latency-vs-load sweep to find the knee in goodput. |
-| **Glossary** | Full formula reference for every metric in the Estimate tab. |
+**[Live demo](https://howmanygpus.streamlit.app/)** , **[Blog post](https://fhalde.github.io/posts/sizing/)**
+
+The Streamlit app is hosted on Community Cloud and may occasionally go into hibernation when idle. If that happens, it can be easily run locally.
 
 ## Quick start
-
-Requires Python ≥ 3.12.
 
 ```bash
 uv sync
 uv run streamlit run src/howmanygpus/main.py
 ```
-
-Or with pip:
-
-```bash
-pip install -e .
-streamlit run src/howmanygpus/main.py
-```
-
-## Presets
-
-**Models:** Llama-3 (8B / 70B / 405B), Mistral-7B, Qwen2.5-72B — or enter custom architecture fields.
-
-**GPUs:** A100-80GB, H100-80GB, H200-141GB, B200, MI300X — or enter custom peak FLOPs, HBM bandwidth, and capacity.
-
-All presets support dtype selection (BF16/FP16, FP8, INT4 weights).
 
 ## References
 
