@@ -166,7 +166,7 @@ def run_ui() -> None:
                 "KV. Higher batch -> better bandwidth efficiency."
             ),
         )
-        sim_dur = st.number_input("sim duration (s)", value=60.0, min_value=1.0)
+        sim_dur = st.number_input("sim duration (s)", value=300.0, min_value=1.0)
         max_batch = st.number_input("max batch (sim)", value=256, min_value=1)
         seed = st.number_input("seed", value=0)
         w = WorkloadSpec(
@@ -743,7 +743,7 @@ def run_ui() -> None:
         )
 
         st.markdown("###### Latency & goodput vs offered load (simulated)")
-        sweep_dur = min(w.sim_duration_s, 30.0)
+        sweep_dur = min(w.sim_duration_s, 150.0)
         st.caption(
             f"Runs the simulator at each rate for {sweep_dur:.0f}s. "
             "Dashed red lines are the p95 SLOs."
