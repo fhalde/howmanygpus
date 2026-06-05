@@ -55,7 +55,7 @@ class WorkloadSpec:
     cv_prompt: float = 0.5
     mean_output: float = 200.0
     cv_output: float = 0.5
-    sim_duration_s: float = 120.0
+    sim_duration_s: float = 300.0
     seed: int = 0
 
 
