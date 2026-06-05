@@ -1,4 +1,4 @@
-LLM x GPU sizing toolkit
+# LLM x GPU sizing toolkit
 
 "GPU poor" is not a lifestyle choice – it's just a capacity planning bug.
 
