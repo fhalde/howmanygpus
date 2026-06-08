@@ -8,7 +8,7 @@ This toolkit helps you avoid both.
 
 It answers a simple question from first principles: how many GPUs do you actually need to serve an LLM at your target load? Under the hood, it combines closed-form capacity floors, a discrete-event simulator (simpy), and parameter sweeps – all wrapped in a single streamlit app.
 
-**[Live demo](https://howmanygpus.streamlit.app/)** , **[Blog post](https://fhalde.github.io/posts/sizing/)**
+**[Live demo](https://huggingface.co/spaces/faizhalde/howmanygpus)** , **[Blog post](https://fhalde.github.io/posts/sizing/)**
 
 The Streamlit app is hosted on Community Cloud and may occasionally go into hibernation when idle. If that happens, it can be easily run locally.
 
