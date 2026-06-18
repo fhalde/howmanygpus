@@ -10,7 +10,7 @@ It answers a simple question from first principles: how many GPUs do you actuall
 
 **[Live demo](https://huggingface.co/spaces/faizhalde/howmanygpus)** , **[Blog post](https://fhalde.github.io/posts/sizing/)**
 
-The Streamlit app is hosted on Community Cloud and may occasionally go into hibernation when idle. If that happens, it can be easily run locally.
+The Streamlit app is hosted on Hugging Face spaces and may occasionally go into hibernation when idle. If that happens, it can be easily run locally.
 
 ## Quick start
 
