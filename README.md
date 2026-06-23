@@ -2,15 +2,13 @@
 
 "GPU poor" is not a lifestyle – it's just a capacity planning mistake.
 
-Running LLMs at scale without thinking about throughput, bandwidth, and KV cache is how you end up either (a) burning money, or (b) under the bridge.
+Running LLMs at scale without thinking about throughput, bandwidth, and KV cache is how you end up either (a) burning money, and (b) under the bridge.
 
 This toolkit helps you avoid both.
 
-It answers a simple question from first principles: how many GPUs do you actually need to serve an LLM at your target load? Under the hood, it combines closed-form capacity floors, a discrete-event simulator (simpy), and parameter sweeps – all wrapped in a single streamlit app.
+It answers a simple question: how many GPUs do you actually need to serve an LLM at your target load? Under the hood, it combines closed-form capacity floors, a discrete-event simulator (simpy), packaged as a streamlit app.
 
 **[Live demo](https://huggingface.co/spaces/faizhalde/howmanygpus)** , **[Blog post](https://fhalde.github.io/posts/sizing/)**
-
-The Streamlit app is hosted on Hugging Face spaces and may occasionally go into hibernation when idle. If that happens, it can be easily run locally.
 
 ## Quick start
 
