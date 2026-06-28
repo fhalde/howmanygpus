@@ -1,4 +1,4 @@
-# GPU fleet capacity planning
+# GPU fleet capacity planning for LLM Inference
 
 "GPU poor" is not a lifestyle – it's just a capacity planning mistake.
 
